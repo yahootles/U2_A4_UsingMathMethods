@@ -50,19 +50,20 @@ public class usingMathMethods extends javax.swing.JFrame {
         hypoOutputLabel = new javax.swing.JLabel();
         floorPromptLabel = new javax.swing.JLabel();
         floorNum1 = new javax.swing.JTextField();
-        floorNum2 = new javax.swing.JTextField();
         floorButton = new javax.swing.JButton();
         floorOutputLabel = new javax.swing.JLabel();
         ceilPromptLabel = new javax.swing.JLabel();
         ceilNum1 = new javax.swing.JTextField();
-        ceilNum2 = new javax.swing.JTextField();
         ceilButton = new javax.swing.JButton();
         ceilOutputLabel = new javax.swing.JLabel();
         ceilPromptLabel1 = new javax.swing.JLabel();
-        ceilNum3 = new javax.swing.JTextField();
-        ceilNum4 = new javax.swing.JTextField();
-        ceilButton1 = new javax.swing.JButton();
-        ceilOutputLabel1 = new javax.swing.JLabel();
+        sqrtNum1 = new javax.swing.JTextField();
+        sqrtButton = new javax.swing.JButton();
+        sqrtOutputLabel = new javax.swing.JLabel();
+        radiansPromptLabel = new javax.swing.JLabel();
+        radiansNum1 = new javax.swing.JTextField();
+        radiansButton = new javax.swing.JButton();
+        radiansOutputLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -193,12 +194,6 @@ public class usingMathMethods extends javax.swing.JFrame {
             }
         });
 
-        floorNum2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                floorNum2ActionPerformed(evt);
-            }
-        });
-
         floorButton.setText("Rounded down");
         floorButton.setPreferredSize(new java.awt.Dimension(110, 23));
         floorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -221,12 +216,6 @@ public class usingMathMethods extends javax.swing.JFrame {
             }
         });
 
-        ceilNum2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceilNum2ActionPerformed(evt);
-            }
-        });
-
         ceilButton.setText("Rounded up");
         ceilButton.setPreferredSize(new java.awt.Dimension(110, 23));
         ceilButton.addActionListener(new java.awt.event.ActionListener() {
@@ -243,29 +232,45 @@ public class usingMathMethods extends javax.swing.JFrame {
         ceilPromptLabel1.setForeground(new java.awt.Color(0, 255, 0));
         ceilPromptLabel1.setText("Enter an integer. The program will display the square root of the number:");
 
-        ceilNum3.addActionListener(new java.awt.event.ActionListener() {
+        sqrtNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceilNum3ActionPerformed(evt);
+                sqrtNum1ActionPerformed(evt);
             }
         });
 
-        ceilNum4.addActionListener(new java.awt.event.ActionListener() {
+        sqrtButton.setText("Square root");
+        sqrtButton.setPreferredSize(new java.awt.Dimension(110, 23));
+        sqrtButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceilNum4ActionPerformed(evt);
+                sqrtButtonActionPerformed(evt);
             }
         });
 
-        ceilButton1.setText("Rounded up");
-        ceilButton1.setPreferredSize(new java.awt.Dimension(110, 23));
-        ceilButton1.addActionListener(new java.awt.event.ActionListener() {
+        sqrtOutputLabel.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
+        sqrtOutputLabel.setForeground(new java.awt.Color(0, 255, 0));
+        sqrtOutputLabel.setText("...");
+
+        radiansPromptLabel.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
+        radiansPromptLabel.setForeground(new java.awt.Color(0, 255, 0));
+        radiansPromptLabel.setText("Enter an angle in degrees. The program will display the angle in radians:");
+
+        radiansNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceilButton1ActionPerformed(evt);
+                radiansNum1ActionPerformed(evt);
             }
         });
 
-        ceilOutputLabel1.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
-        ceilOutputLabel1.setForeground(new java.awt.Color(0, 255, 0));
-        ceilOutputLabel1.setText("...");
+        radiansButton.setText("In radians");
+        radiansButton.setPreferredSize(new java.awt.Dimension(110, 23));
+        radiansButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radiansButtonActionPerformed(evt);
+            }
+        });
+
+        radiansOutputLabel.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
+        radiansOutputLabel.setForeground(new java.awt.Color(0, 255, 0));
+        radiansOutputLabel.setText("...");
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -277,7 +282,7 @@ public class usingMathMethods extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(maxNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(maxButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(maxButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(maxOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -292,7 +297,7 @@ public class usingMathMethods extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(minNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(minButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(minButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(minOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(mainPanelLayout.createSequentialGroup()
@@ -300,7 +305,7 @@ public class usingMathMethods extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(powNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(powButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(powButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(powOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(226, 226, 226))
@@ -314,47 +319,53 @@ public class usingMathMethods extends javax.swing.JFrame {
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hypoPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(floorPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ceilPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ceilPromptLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
+                        .addComponent(floorNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hypoPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(floorPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ceilPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ceilPromptLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(radiansPromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(hypoNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(hypoNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
-                                .addComponent(hypoButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hypoOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(floorNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(floorNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
-                                .addComponent(floorButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(floorOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(ceilNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(ceilNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
-                                .addComponent(ceilButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ceilOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(ceilNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(ceilNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
-                                .addComponent(ceilButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ceilOutputLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(216, 216, 216)))
-                .addContainerGap())
+                                .addGap(10, 10, 10)
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addComponent(hypoNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(hypoNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(hypoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(hypoOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addGap(144, 144, 144)
+                                        .addComponent(floorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(floorOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addComponent(ceilNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(94, 94, 94)
+                                        .addComponent(ceilButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(ceilOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addComponent(sqrtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(94, 94, 94)
+                                        .addComponent(sqrtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(sqrtOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addComponent(radiansNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(94, 94, 94)
+                                        .addComponent(radiansButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(radiansOutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(216, 216, 216)))
+                        .addContainerGap())))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,7 +409,6 @@ public class usingMathMethods extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(floorNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(floorNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(floorButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(floorOutputLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -406,18 +416,23 @@ public class usingMathMethods extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ceilNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ceilNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ceilButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ceilOutputLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ceilPromptLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ceilNum3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ceilNum4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ceilButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ceilOutputLabel1))
-                .addContainerGap(116, Short.MAX_VALUE))
+                    .addComponent(sqrtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sqrtButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sqrtOutputLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(radiansPromptLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radiansNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radiansButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radiansOutputLabel))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -443,7 +458,12 @@ public class usingMathMethods extends javax.swing.JFrame {
     }//GEN-LAST:event_maxNum2ActionPerformed
 
     private void maxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maxButtonActionPerformed
-        // TODO add your handling code here:
+        double a = Double.parseDouble(maxNum1.getText());
+        double b = Double.parseDouble(maxNum2.getText());
+        
+        double q = Math.max(a, b);
+        
+        maxOutputLabel.setText("" + q);
     }//GEN-LAST:event_maxButtonActionPerformed
 
     private void minNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minNum1ActionPerformed
@@ -455,11 +475,21 @@ public class usingMathMethods extends javax.swing.JFrame {
     }//GEN-LAST:event_minNum2ActionPerformed
 
     private void minButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minButtonActionPerformed
-        // TODO add your handling code here:
+        double a = Double.parseDouble(minNum1.getText());
+        double b = Double.parseDouble(minNum2.getText());
+        
+        double q = Math.min(a, b);
+        
+        minOutputLabel.setText("" + q);
     }//GEN-LAST:event_minButtonActionPerformed
 
     private void powButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powButtonActionPerformed
-        // TODO add your handling code here:
+        double a = Double.parseDouble(powNum1.getText());
+        double b = Double.parseDouble(powNum2.getText());
+        
+        double q = Math.pow(a, b);
+        
+        powOutputLabel.setText("" + q);
     }//GEN-LAST:event_powButtonActionPerformed
 
     private void powNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powNum2ActionPerformed
@@ -471,7 +501,12 @@ public class usingMathMethods extends javax.swing.JFrame {
     }//GEN-LAST:event_powNum1ActionPerformed
 
     private void hypoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hypoButtonActionPerformed
-        // TODO add your handling code here:
+        double a = Double.parseDouble(hypoNum1.getText());
+        double b = Double.parseDouble(hypoNum2.getText());
+        
+        double q = Math.hypot(a, b);
+        
+        hypoOutputLabel.setText("" + q);
     }//GEN-LAST:event_hypoButtonActionPerformed
 
     private void hypoNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hypoNum2ActionPerformed
@@ -486,37 +521,49 @@ public class usingMathMethods extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_floorNum1ActionPerformed
 
-    private void floorNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_floorNum2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_floorNum2ActionPerformed
-
     private void floorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_floorButtonActionPerformed
-        // TODO add your handling code here:
+        double a = Double.parseDouble(floorNum1.getText());
+        
+        double q = Math.floor(a);
+        
+        floorOutputLabel.setText("" + q);
     }//GEN-LAST:event_floorButtonActionPerformed
 
     private void ceilNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilNum1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ceilNum1ActionPerformed
 
-    private void ceilNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilNum2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ceilNum2ActionPerformed
-
     private void ceilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilButtonActionPerformed
-        // TODO add your handling code here:
+        double a = Double.parseDouble(ceilNum1.getText());
+        
+        double q = Math.ceil(a);
+        
+        ceilOutputLabel.setText("" + q);
     }//GEN-LAST:event_ceilButtonActionPerformed
 
-    private void ceilNum3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilNum3ActionPerformed
+    private void sqrtNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sqrtNum1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ceilNum3ActionPerformed
+    }//GEN-LAST:event_sqrtNum1ActionPerformed
 
-    private void ceilNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilNum4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ceilNum4ActionPerformed
+    private void sqrtButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sqrtButtonActionPerformed
+        double a = Integer.parseInt(sqrtNum1.getText());
+        
+        double q = Math.sqrt(a);
+        
+        sqrtOutputLabel.setText("" + q);
+    }//GEN-LAST:event_sqrtButtonActionPerformed
 
-    private void ceilButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilButton1ActionPerformed
+    private void radiansNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiansNum1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ceilButton1ActionPerformed
+    }//GEN-LAST:event_radiansNum1ActionPerformed
+
+    private void radiansButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiansButtonActionPerformed
+        double a = Double.parseDouble(radiansNum1.getText());
+        
+        double q = Math.toRadians(a);
+        
+        radiansOutputLabel.setText("" + q);
+    }//GEN-LAST:event_radiansButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -555,18 +602,12 @@ public class usingMathMethods extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ceilButton;
-    private javax.swing.JButton ceilButton1;
     private javax.swing.JTextField ceilNum1;
-    private javax.swing.JTextField ceilNum2;
-    private javax.swing.JTextField ceilNum3;
-    private javax.swing.JTextField ceilNum4;
     private javax.swing.JLabel ceilOutputLabel;
-    private javax.swing.JLabel ceilOutputLabel1;
     private javax.swing.JLabel ceilPromptLabel;
     private javax.swing.JLabel ceilPromptLabel1;
     private javax.swing.JButton floorButton;
     private javax.swing.JTextField floorNum1;
-    private javax.swing.JTextField floorNum2;
     private javax.swing.JLabel floorOutputLabel;
     private javax.swing.JLabel floorPromptLabel;
     private javax.swing.JButton hypoButton;
@@ -575,45 +616,28 @@ public class usingMathMethods extends javax.swing.JFrame {
     private javax.swing.JLabel hypoOutputLabel;
     private javax.swing.JLabel hypoPromptLabel;
     private javax.swing.JPanel mainPanel;
-    private javax.swing.JPanel mainPanel1;
-    private javax.swing.JPanel mainPanel2;
     private javax.swing.JButton maxButton;
-    private javax.swing.JButton maxButton1;
-    private javax.swing.JButton maxButton2;
     private javax.swing.JTextField maxNum1;
     private javax.swing.JTextField maxNum2;
-    private javax.swing.JTextField maxNum3;
-    private javax.swing.JTextField maxNum4;
-    private javax.swing.JTextField maxNum5;
-    private javax.swing.JTextField maxNum6;
     private javax.swing.JLabel maxOutputLabel;
-    private javax.swing.JLabel maxOutputLabel1;
-    private javax.swing.JLabel maxOutputLabel2;
     private javax.swing.JLabel maxPromptLabel;
-    private javax.swing.JLabel maxPromptLabel1;
-    private javax.swing.JLabel maxPromptLabel2;
     private javax.swing.JButton minButton;
-    private javax.swing.JButton minButton1;
-    private javax.swing.JButton minButton2;
     private javax.swing.JTextField minNum1;
     private javax.swing.JTextField minNum2;
-    private javax.swing.JTextField minNum3;
-    private javax.swing.JTextField minNum4;
-    private javax.swing.JTextField minNum5;
-    private javax.swing.JTextField minNum6;
     private javax.swing.JLabel minOutputLabel;
-    private javax.swing.JLabel minOutputLabel1;
-    private javax.swing.JLabel minOutputLabel2;
     private javax.swing.JLabel minPromptLabel;
-    private javax.swing.JLabel minPromptLabel1;
-    private javax.swing.JLabel minPromptLabel2;
     private javax.swing.JButton powButton;
     private javax.swing.JTextField powNum1;
     private javax.swing.JTextField powNum2;
     private javax.swing.JLabel powOutputLabel;
     private javax.swing.JLabel powPromptLabel;
+    private javax.swing.JButton radiansButton;
+    private javax.swing.JTextField radiansNum1;
+    private javax.swing.JLabel radiansOutputLabel;
+    private javax.swing.JLabel radiansPromptLabel;
+    private javax.swing.JButton sqrtButton;
+    private javax.swing.JTextField sqrtNum1;
+    private javax.swing.JLabel sqrtOutputLabel;
     private javax.swing.JLabel titleLabel;
-    private javax.swing.JLabel titleLabel1;
-    private javax.swing.JLabel titleLabel2;
     // End of variables declaration//GEN-END:variables
 }
